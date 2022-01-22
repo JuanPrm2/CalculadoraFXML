@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
@@ -17,6 +19,7 @@ public class CalculadoraController implements Initializable{
 
 	private Calculadora calculadora= new Calculadora();
 	
+
 	
 		@FXML
 		private GridPane root;
@@ -192,7 +195,26 @@ public class CalculadoraController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
+		MenuItem clasico = new MenuItem();
+		MenuItem moderna = new MenuItem();
 		
+		clasico.setOnAction(e->{
+			root.getStylesheets().clear();
+			root.getStylesheets().add("/Estilos/Clasica.css");
+		});
+		
+		moderna.setOnAction(e->{
+			root.getStylesheets().clear();
+			root.getStylesheets().add("/Estilos/Moderna.css");
+		});
+		
+		ContextMenu menu = new ContextMenu(clasico, moderna);
+		
+		root.setOnContextMenuRequested(e->{
+			menu.show(root,e.getSceneX(),e.getSceneY());
+		});
+		
+	
 	}
 
 	public GridPane getRoot() {

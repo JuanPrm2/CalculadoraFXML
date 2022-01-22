@@ -1,0 +1,68 @@
+.root{
+	-fx-background-color:black;
+	-fx-font-family:monospace;
+	-fx-hgap:5px;
+	-fx-vgap:5px;
+	-fx-padding:5px;
+}
+.textField{
+	-fx-background-color:#9b9b9b;
+	-fx-alignment:right;
+	-fx-font-size:25pt;
+	-fx-font-weight:bold;
+	-fx-padding:10px;
+	-fx-background-color:transparent;
+	-fx-background-insets:0px 0px 0px 0px;
+}
+.button{
+	-fx-font-size:25pt;
+	-fx-background-insets:0px 0px 0px 0px;
+	-fx-background-radius:5em;
+	-fx-border-radius:5em;
+}
+.button:focused{
+	-fx-border-color:white;
+}
+.button:armed{
+	-fx-border-color:yellow;
+}
+.botonesDeNumeros{
+	-fx-text-fill:white;
+	-fx-background-color:#828282;
+}
+.botonesDeNumeros:hover{
+	-fx-text-fill:#828282;
+	-fx-background-color:white;
+}
+.botonesDeNumeros:pressed{
+	-fx-text-fill:#828282;
+	-fx-background-color:black;
+}
+.botonesDeBorrado{
+	-fx-text-fill:black;
+	-fx-background-color:#9b9b9b;
+}
+.botonesDeBorrado:hover{
+	-fx-background-color:white;
+}
+.botonesDeBorrado:pressed{
+	-fx-text-fill:#828282;
+	-fx-background-color:black;
+}
+.botonesDeOperaciones{
+	-fx-text-fill:white;
+	-fx-background-color:orange;
+}
+.botonesDeOperaciones:hover{
+	-fx-background-color:#ff8000;
+}
+.botonesDeOperaciones:hover:default{
+	-fx-background-color:red;
+}
+.botonesDeOperaciones:pressed{
+	-fx-text-fill:orange;
+	-fx-background-color:white;
+}
+.botonIgual{
+	-fx-background-color:orangered;
+}
